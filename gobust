@@ -1,6 +1,11 @@
 #!/bin/bash
 #
 # Written by: Shawn Dubbz
+#
+# Ease-of-access script for running Gobuster,
+# includes wordlist size choice and query verification
+#
+# * Does NOT include GoBuster installation (Assumes *gobuster* is an available tool/command) *
 
 if [ ! $2 ]; then
 
@@ -25,7 +30,6 @@ case $schoice in
 
 	
 	;;
-
 	1|*)
 
 		echo ''
@@ -36,7 +40,6 @@ case $schoice in
 			gobuster dir -t $2 -u $1 -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
 
 	;;	
-
 esac
 
 echo ''
@@ -44,4 +47,3 @@ echo '[*] Gobust Script completed, exiting...'
 echo ''
 
 	exit 0
-
