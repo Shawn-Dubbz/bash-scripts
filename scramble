@@ -1,0 +1,28 @@
+#!/bin/bash
+#
+# Written by: Shawn Dubbz
+
+if [ ! $1 ]; then
+
+	echo '[!] Incorrect usage!'
+	echo '[*] Usage: [scramble] [Network Device]'
+
+	exit 1
+
+fi
+
+
+sudo ifconfig $1 down
+
+sleep 3
+
+sudo macchanger -r $1 | grep 'New'
+
+sleep 5
+
+sudo ifconfig $1 up
+
+echo ''
+echo 'You are now... Incognitus... -_-'
+
+	exit 0

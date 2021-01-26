@@ -1,0 +1,47 @@
+#!/bin/bash
+#
+# Written by: Shawn Dubbz
+
+if [ ! $2 ]; then
+
+	echo '[!] Incorrect usage!'
+	echo '[*] Usage: [gobust] [IP Address/Website] [Threads] '
+
+	exit 1
+fi
+
+echo ''
+read -p '[?] Please choose a wordlist...   (1=Small / 2=Medium)  '  schoice
+case $schoice in
+	
+	2)
+	
+		echo ''
+		echo '[~] Running Gobuster tool...'
+		echo '[*] (Using Medium Wordlist)'
+		echo ''
+
+			gobuster dir -t $2 -u $1 -w /usr/share/dirbuster/wordlists/directory-list-2.3-medium.txt
+
+	
+	;;
+
+	1|*)
+
+		echo ''
+		echo '[~] Running Gobuster tool...'
+		echo '[*] (Using Small Wordlist)'
+		echo ''
+
+			gobuster dir -t $2 -u $1 -w /usr/share/dirbuster/wordlists/directory-list-2.3-small.txt
+
+	;;	
+
+esac
+
+echo ''
+echo '[*] Gobust Script completed, exiting...'
+echo ''
+
+	exit 0
+

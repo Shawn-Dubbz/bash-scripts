@@ -1,0 +1,10 @@
+#!/bin/bash
+#
+# Written by Shawn Dubbz 
+
+echo 'IP Address[s]:'
+echo ''
+
+	ifconfig | grep -v 127.0.0. | grep "inet" | grep -v inet6 | awk '{ print $2 }'
+
+	exit 0

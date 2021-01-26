@@ -1,0 +1,47 @@
+#!/bin/bash
+# 
+#
+# Written by Shawn Dubbz
+#
+# Requirements:
+# 
+# git
+# python3
+# pip3
+# 
+
+if [ ! $1 ]; then
+
+	echo "[!] Incorrect usage!"
+	echo "[*] Usage: [whereis] [IP Address]"
+
+	exit 1
+
+fi
+
+if [ -d ~/IPGeoLocation ]; then
+
+	sleep .1
+
+else 	echo '[!] Tool not found!'
+
+	echo '[~] Installing and setting up... (~/IPGeoLocation)'
+
+	cd ~
+
+	git clone https://github.com/maldevel/IPGeoLocation.git
+
+	cd ~/IPGeoLocation
+
+	pip3 install -r requirements.txt
+
+
+fi
+
+python3 ~/IPGeoLocation/ipgeolocation.py -t $1
+
+echo ''
+echo 'whereis Script completed, exiting...'
+echo ''
+
+	exit 0
