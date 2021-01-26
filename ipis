@@ -4,7 +4,6 @@
 #
 # Simple script to display currently active IP addresses
 # on current machine
-#
 
 echo 'IP Address[s]:'
 echo ''
