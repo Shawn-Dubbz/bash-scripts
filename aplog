@@ -1,6 +1,13 @@
 #!/bin/bash
 #
 # Written by: Shawn Dubbz
+#
+# What it does:
+#
+# Ease-of-access for viewing the apache2 access log, useful for
+# blue-team operations, troubleshooting, or if you're just curious :)
+#
+# * Only useful if running an HTTP or HTTPS service using Apache2 *
 
 sudo echo ''
 read -p '[?] Please choose a usage... (1: Last 50 entries / 2: Keep log open)  '  schoice
@@ -11,13 +18,11 @@ case $schoice in
 		sudo tail -f /var/log/apache2/access.log
 
 	;;
-	
 	1|*)
 
 		sudo tail -50 /var/log/apache2/access.log
 
 	;;
-
 esac
 
 echo ''
