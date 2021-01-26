@@ -1,7 +1,11 @@
 #!/bin/bash
 # 
 #
-# Written by Shawn Dubbz
+# Written by: Shawn Dubbz
+#
+# Custom script for installing and using the 
+# "IPGeoLocation" tool; used for finding location
+# and misc info about an IP Address
 #
 # Requirements:
 # 
@@ -34,7 +38,6 @@ else 	echo '[!] Tool not found!'
 	cd ~/IPGeoLocation
 
 	pip3 install -r requirements.txt
-
 
 fi
 
