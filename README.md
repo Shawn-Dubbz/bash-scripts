@@ -5,7 +5,7 @@
 
 <body>
  <b> Scripts and Tools for Linux: </b>  
-  <br>
+  <hr>
   <ul>
     <li> Networking </li>
     <li> Scanning and Enumeration </li>
