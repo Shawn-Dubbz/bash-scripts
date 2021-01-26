@@ -1,6 +1,9 @@
 #!/bin/bash
 #
 # Written by Shawn Dubbz
+#
+# Displays currently active UDP and TCP
+# connections on current machine
 
 sudo sleep .1
 echo "Current UDP and TCP connections:"
@@ -13,5 +16,3 @@ echo '[*] utapn Script completed, exiting...'
 echo ''
 
 	exit 0
-
-
